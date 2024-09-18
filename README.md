@@ -1,25 +1,55 @@
-# StreamShare streaming platform
-HOW TO DEMO: 
-In order to correctly run the application, you need to start both the frontend and the backend, so make sure to open two terminals and run these two commands (one for each terminal):
-npm run dev (<- frontend) | npm run devStart (<- backend)
-Once both processes are running correctly, you should check the terminal in which you have ran the frontend as it should be providing you with a link to the application in localhost, namely: `http://localhost:5173/`, by ctrl + left clicking on it you should open a new page on your browser to see the application's frontend.
-Once inside, what you should be looking at is the front page of our application, the working buttons (for now) are the following: the `Stream now` and `Watch` buttons, both of which directs you to the login webpage, since you have never registered, I suggest you click directly on the `Register` button, which will direct you to the registration webpage, otherwise you can click on the `google icon` button or the pop up notification in order to automatically register/login through google's system, you can also click on the `Home` or the `StreamShare logo` buttons to go back to the home page.
-The Register page allows you to insert your credentials, make sure every field is filled, otherwise you will be notified which field is missing, once every field is inserted correctly, you can proceed to click the `Create account` button to register the new account in the database, other options are, again, to click the `Home` or `StreamShare logo` buttons to go back to the home page or to press the `Login` or `Watch` buttons to go back to the login page.
-For now, after completing the login phase, you are redirected to an empty webpage which is supposed to be the role: `user` webpage (not yet implemented), the webpage currently working is the role: `admin` one which you cannot register for since we've decided it would be better if the admins' login informations were hard coded by the developers inside of the database, for this reason we will provide an email and password to access aforementioned page: email : `exampleadmin@gmail.com`, password : `adminadmin`. 
-Once logged in as role: `admin` you will be redirected into the webpage `http://localhost:5173/admin-dashboard` in which you will see the list of uploaded videos, by hovering the cursor over any of the listed thumbnails, a button `Remove` will appear, by pressing it, the selected video will be deleted from the database and from the webpage, by scrolling down you will find another button `Upload content` which, if pressed, will show a pop-up interface with two fields to be filled, namely `Title` and the other allows you to grab a file from your pc, once everything is filled in, you can then press the `Upload` button to update the contents list of the webpage (after some buffering time due to the delay given by the transfer of the video file to the database) and the database while the pop-up window closes, by pressing the `Logout` button you will be sent to the login webpage and logged out of the account you're using, once again, by pressing the `Watch` button you will be redirected to the login webpage, the `Home` or `StreamShare logo` buttons redirects you to the home page.
-It is important to denote that every error is notified to the user with a small explanation on what went wrong and the error code, in case of error during the compilation of multiple field, you will be visually warned of which fields are missing.
+# How to Demo
 
+To correctly run the application, you'll need to start both the **frontend** and the **backend**. Follow these steps:
 
+1. Open **two terminals**.
+2. Run the following commands (one per terminal):
+   - Frontend: `npm run dev`
+   - Backend: `npm run devStart`
 
+Once both processes are running, check the frontend terminal. It will provide a link to the application at `http://localhost:5173/`. You can open it by **Ctrl + Left Clicking** on the link, which will launch the application's frontend in your browser.
 
+### Using the Application
 
+When you open the application, you'll see the home page. The following buttons are functional at the moment:
+- **Stream Now**
+- **Watch**
 
+Both of these buttons will take you to the login page. Since you're likely not registered yet, click on the **Register** button to go to the registration page.
 
+Alternatively, you can:
+- Click the **Google icon** button or the **Google pop-up notification** to automatically register/login via Google.
+- Click the **Home** or **StreamShare** logo buttons to return to the home page.
 
+### Registration Process
 
+On the **Register** page, fill in your credentials. Make sure all fields are complete; any missing fields will be highlighted for you to correct. Once everything is filled out, click the **Create Account** button to register your account.
 
+You can also:
+- Return to the home page by clicking the **Home** or **StreamShare** logo buttons.
+- Go back to the login page by clicking the **Login** or **Watch** buttons.
 
+### Login and Admin Dashboard
 
+After logging in, you’ll be redirected to the **user dashboard**, which is still under development. However, the **admin dashboard** is functional, but you can't register for an admin account directly.
 
+Instead, use these admin credentials to log in:
+- **Email**: exampleadmin@gmail.com
+- **Password**: adminadmin
 
+Once logged in as an admin, you'll be redirected to the admin dashboard at `http://localhost:5173/admin-dashboard`. There, you'll see a list of uploaded videos.
 
+#### Admin Actions:
+- **Remove Videos**: Hover over any video thumbnail to reveal a **Remove** button. Click it to delete the selected video from the database and the webpage.
+- **Upload Content**: Scroll down to find the **Upload Content** button. Click it to open a pop-up where you can:
+  - Enter the **Title** of the video.
+  - Upload a **file** from your computer.
+  Once everything is filled out, click **Upload**. After some buffering (due to file transfer), the content list will update and the pop-up will close.
+
+- **Logout**: Clicking the **Logout** button will log you out and return you to the login page.
+
+Other buttons like **Watch**, **Home**, or **StreamShare** will redirect you to their respective pages.
+
+### Error Handling
+
+If any errors occur, a small explanation and the error code will be displayed. If there are multiple fields to fill out and some are incomplete, the missing fields will be visually indicated.
